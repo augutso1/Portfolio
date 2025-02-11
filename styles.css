@@ -10,19 +10,23 @@ body {
     color: rgb(255, 255, 255); 
 }
 
+@media screen and (max-width: 768px) {
+    .titulo {
+        padding-left: 5%;
+        padding-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 1.5em;
+        padding-left: 5%;
+    }
+}
+
 .texto-abaixo-colunas h2 {
     align-self: flex-start;
     color: white;
-}
-
-.redes-sociais {
-    text-align: left;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: fit-content;
-    text-decoration: none;
 }
 
 .redes-sociais a {
@@ -35,11 +39,14 @@ body {
     transition: text-decoration-color 0.3s ease;
 }
 
+.link-text {
+    font-size: 14px;
+}
+
 .redes-sociais .link-text,
 .coluna h5 a {
     text-decoration: underline;
     text-decoration-color: #323232;
-    text-underline-offset: 2px;
     transition: text-decoration-color 0.3s ease;
 }
 
@@ -49,7 +56,7 @@ body {
 }
 
 #github-arrow {
-    padding-right: 8px;
+    padding-right: 6px;
 }
 
 .material-icons {
@@ -126,9 +133,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;  /* Changed from center */
+    align-items: flex-start;
     text-align: left;
-    margin: 30px auto;
+    margin: 10px auto;
+    padding-left: 200%;
     color: rgb(147, 147, 147);
     width: 100%;
     max-width: 800px;
@@ -136,18 +144,104 @@ body {
     word-wrap: break-word;
 }
 
+@media screen and (max-width: 768px) {
+    .texto-abaixo-colunas {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
 .texto-abaixo-colunas h2 {
-    padding-right: 0;  /* Remove fixed padding */
+    padding-right: 0px;  /* Remove fixed padding */
     color: white;
     margin-bottom: 10px;  /* Add some space below the heading */
 }
 
-/* Update media query for mobile responsiveness */
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;  /* Remove the padding */
+}
+
+/* Single, consolidated .redes-sociais rule */
+.redes-sociais {
+    text-align: left;
+    margin-top: 0;
+    padding-left: 16%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+}
+
+.redes-sociais a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: #c9c9c9;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.link-text {
+    font-size: clamp(14px, 2vw, 16px);
+    white-space: nowrap;
+}
+
+/* Consolidated link text styles */
+.redes-sociais .link-text,
+.coluna h5 a {
+    text-decoration: underline;
+    text-decoration-color: #323232;
+    transition: text-decoration-color 0.3s ease;
+    font-size: 14px;
+}
+
+/* Single hover effect rule */
+.redes-sociais a:hover .link-text,
+.coluna h5 a:hover {
+    text-decoration-color: #6d6d6d;
+}
+
+/* Single icon spacing rule */
+.redes-sociais a i {
+    margin-right: 5px;
+}
+
+/* Media queries */
 @media screen and (max-width: 768px) {
+    .redes-sociais {
+        padding-left: 5%;
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .material-icons {
+        font-size: 8px;
+        right: -20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .redes-sociais a {
+        margin: 0 5px;
+    }
+    
+    .material-icons {
+        right: -16px;
+    }
+}
+    
     .texto-acima-colunas,
     .texto-abaixo-colunas {
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    .header-content {
+        padding: 0 5%;
     }
 }
 
@@ -183,8 +277,6 @@ body {
 
 .redes-sociais {
     text-align: center;
-    margin-top: 0px;
-    margin-left: 600px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -223,13 +315,7 @@ body {
     color: white;
     text-decoration: underline;
     text-decoration-color: #6d6d6d;
-}
-
-/* Remove this duplicate rule */
-/* .coluna h5 a:hover {
-    opacity: 1;
-    transform: translateX(0);
-} */
+}   
 
 .material-icons {
     position: absolute;
