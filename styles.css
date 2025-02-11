@@ -1,0 +1,252 @@
+body {
+    background-color: #111111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+} 
+
+.titulo {
+    text-align: left;
+    padding-top: 10vh;
+    padding-left: 30%;
+    color: rgb(255, 255, 255); 
+}
+
+.texto-abaixo-colunas h2 {
+    align-self: flex-start;
+    color: white;
+}
+
+.redes-sociais {
+    text-align: left;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.redes-sociais a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: #c9c9c9;
+    text-decoration: underline;
+    text-decoration-color: #323232;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.redes-sociais .link-text,
+.coluna h5 a {
+    text-decoration: underline;
+    text-decoration-color: #323232;
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.redes-sociais a:hover .link-text,
+.coluna h5 a:hover {
+    text-decoration-color: #6d6d6d;
+}
+
+#github-arrow {
+    padding-right: 8px;
+}
+
+.material-icons {
+    position: absolute;
+    opacity: 0;
+    font-size: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-5px);
+    color: #4c4c4c;
+}
+
+/* Remove any duplicate .redes-sociais declarations */
+.colunas {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 5%;
+}
+
+/* Add media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .titulo {
+        padding-left: 5%;
+        padding-top: 5vh;
+    }
+
+    .texto-abaixo-colunas h2 {
+        padding-left: 5%;
+    }
+
+    .redes-sociais {
+        padding-left: 5%;
+    }
+
+    .coluna {
+        width: 100%;
+        max-width: 300px;
+        margin: 15px 15px;
+    }
+
+    .texto-acima-colunas,
+    .texto-abaixo-colunas {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 1.5em;
+    }
+
+    .coluna {
+        margin: 15px 10px;
+    }
+}
+
+.texto-acima-colunas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  /* Changed from center */
+    text-align: left;
+    margin: 10px auto;
+    color: rgb(147, 147, 147);
+    width: 100%;
+    max-width: 800px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.texto-abaixo-colunas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  /* Changed from center */
+    text-align: left;
+    margin: 30px auto;
+    color: rgb(147, 147, 147);
+    width: 100%;
+    max-width: 800px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.texto-abaixo-colunas h2 {
+    padding-right: 0;  /* Remove fixed padding */
+    color: white;
+    margin-bottom: 10px;  /* Add some space below the heading */
+}
+
+/* Update media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .texto-acima-colunas,
+    .texto-abaixo-colunas {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+.texto-abaixo-colunas h2 {
+    padding-right: 755px;
+    color: white;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 30px 30px;
+    text-align: left;
+    color: white;
+    width: 200px;
+}
+
+.coluna h5 {
+    margin-bottom: 0px;
+}
+
+.coluna h6 {
+    margin-bottom: 0px;
+    color: rgb(203, 203, 203);
+}
+
+.coluna p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(147, 147, 147);
+}
+
+.redes-sociais {
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.redes-sociais a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: underline;
+    text-decoration-color: #323232;
+    color: #c9c9c9;
+    transition: text-decoration-color 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.redes-sociais a:hover {
+    text-decoration-color: #6d6d6d;
+}   
+
+.redes-sociais a i {
+    margin-right: 5px;
+}
+
+.coluna h5 a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #323232;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.coluna h5 a:hover {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #6d6d6d;
+}
+
+/* Remove this duplicate rule */
+/* .coluna h5 a:hover {
+    opacity: 1;
+    transform: translateX(0);
+} */
+
+.material-icons {
+    position: absolute;
+    right: -24px;  /* Increased from -20px to add more space */
+    opacity: 0;
+    font-size: 10px;  /* Reduced from 12px to make it smaller */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-5px);
+    color: #4c4c4c;
+}
+
+/* Add this rule to show the icon on hover */
+a:hover .material-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Remove duplicate .material-icons styles from HTML */
+
+  
